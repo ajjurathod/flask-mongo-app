@@ -11,22 +11,28 @@ Ensure the application is prepared for deployment with at least 2 replic
 
 2. Building and Pushing the Docker Image
 Build the Docker Image:
+
 docker build -t ajjurathod1998/flask-mongodb-app .
 Push the Docker Image to Docker Hub:
+
 docker push ajjurathod1998/flask-mongodb-app
 
-3. Kubernetes Setup
+4. Kubernetes Setup
 Start Minikube:
+
 minikube start
 
-4. Deploying to Kubernetes
+6. Deploying to Kubernetes
 Apply the MongoDB Secret:
+
 kubectl apply -f mongodb-secret.yaml
 
 Apply the MongoDB StatefulSet:
+
 kubectl apply -f mongodb-statefulset.yaml
 
 Apply the Flask Deployment:
+
 kubectl apply -f flask-deployment.yaml
 
 Apply the Services:
