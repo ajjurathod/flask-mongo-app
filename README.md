@@ -36,14 +36,17 @@ Apply the Flask Deployment:
 kubectl apply -f flask-deployment.yaml
 
 Apply the Services:
+
 kubectl apply -f flask-service.yaml
 kubectl apply -f mongodb-service.yaml
 
 Check the status of the pods:
+
 kubectl get pods
 
 5. DNS Resolution
 Explanation:
+
 Kubernetes handles DNS resolution for inter-pod communication through its internal DNS service. Services are accessible by their names within the cluster. The Flask application connects to MongoDB using the MongoDB service name.
 
 
@@ -53,9 +56,9 @@ Resource requests and limits ensure that the pods do not consume more resources 
 Resource Requests: Minimum resources guaranteed for the pod.
 Resource Limits: Maximum resources a pod is allowed to consume.
 
-Example configuration:
-yaml
+Example configuration
 
+yaml:
 resources:
   requests:
     cpu: "200m"
